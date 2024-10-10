@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дизайнерский сайт с анимацией</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Интро-анимация -->
+    <div id="intro">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Фон и заголовок с анимацией тайпинга -->
+    <header id="main-header">
+        <div class="overlay"></div>
+        <h1 class="typing-text">Добро пожаловать на наш сайт!</h1>
+    </header>
+
+    <!-- Меню навигации -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#home" onclick="smoothScroll('#home')">Главная</a></li>
+            <li><a href="#about" onclick="smoothScroll('#about')">О нас</a></li>
+            <li><a href="#services" onclick="smoothScroll('#services')">Услуги</a></li>
+            <li><a href="#contact" onclick="smoothScroll('#contact')">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Контент -->
+    <section id="home" class="content-section">
+        <h2>Наши преимущества</h2>
+        <div class="feature-box">Контент 1</div>
+        <div class="feature-box">Контент 2</div>
+        <div class="feature-box">Контент 3</div>
+    </section>
+
+    <section id="about" class="content-section">
+        <h2>О компании</h2>
+        <p>Здесь текст об компании</p>
+    </section>
+
+    <section id="services" class="content-section">
+        <h2>Услуги</h2>
+        <p>Здесь текст об услугах</p>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2024 Дизайнерский сайт</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

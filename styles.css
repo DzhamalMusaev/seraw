@@ -1,0 +1,178 @@
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #222;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content-section {
+    padding: 100px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Интро-анимация */
+#intro {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top: 5px solid #888;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Заголовок с эффектом тайпинга */
+#main-header {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.typing-text {
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: white;
+    }
+}
+
+/* Меню навигации */
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 100;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #ffcc00;
+    text-shadow: 0px 0px 5px rgba(255, 204, 0, 0.8);
+}
+
+/* Элементы контента */
+.feature-box {
+    display: inline-block;
+    background-color: #444;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    background-color: #555;
+}
+
+/* Футер */
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #777;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #ffcc00;
+}
